@@ -38,12 +38,12 @@ final class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         components.scheme = "https"
         components.host = "ray.so"
         components.queryItems = [
-            URLQueryItem(name: "colors", value: color),
-            URLQueryItem(name: "background", value: "\(background)"),
-            URLQueryItem(name: "darkMode", value: "\(darkMode)"),
-            URLQueryItem(name: "padding", value: "\(padding)"),
-            URLQueryItem(name: "title", value: "Untitled"),
-            URLQueryItem(name: "code", value: base64String)
+            .init(name: "colors", value: color),
+            .init(name: "background", value: "\(background)"),
+            .init(name: "darkMode", value: "\(darkMode)"),
+            .init(name: "padding", value: "\(padding)"),
+            .init(name: "title", value: "Untitled"),
+            .init(name: "code", value: base64String)
         ]
         
         return components.url

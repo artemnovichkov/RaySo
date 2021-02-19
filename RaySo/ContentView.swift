@@ -63,7 +63,7 @@ struct ContentView: View {
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding(.bottom, 16)
-            Button("Visit the project") {
+            Button("Visit the project on Github") {
                 let url = URL(string: "https://github.com/artemnovichkov/RaySo")!
                 openURL(url)
             }
