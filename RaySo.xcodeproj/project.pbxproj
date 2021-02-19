@@ -1,0 +1,523 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0607132925DE72BA006A784C /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0646345025DE6FB7002BCA3D /* XcodeKit.framework */; };
+		0607132A25DE72BA006A784C /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0646345025DE6FB7002BCA3D /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0646343425DE644B002BCA3D /* RaySoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0646343325DE644B002BCA3D /* RaySoApp.swift */; };
+		0646343625DE644B002BCA3D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0646343525DE644B002BCA3D /* ContentView.swift */; };
+		0646343825DE644D002BCA3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0646343725DE644D002BCA3D /* Assets.xcassets */; };
+		0646343B25DE644D002BCA3D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0646343A25DE644D002BCA3D /* Preview Assets.xcassets */; };
+		0646344F25DE6FB7002BCA3D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0646344E25DE6FB7002BCA3D /* Cocoa.framework */; };
+		0646345425DE6FB7002BCA3D /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0646345325DE6FB7002BCA3D /* SourceEditorExtension.swift */; };
+		0646345625DE6FB7002BCA3D /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0646345525DE6FB7002BCA3D /* SourceEditorCommand.swift */; };
+		0646345B25DE6FB7002BCA3D /* RaySoExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0646344C25DE6FB7002BCA3D /* RaySoExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		06ADF51D25DE85F700BD00C7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ADF51C25DE85F700BD00C7 /* Constants.swift */; };
+		06ADF51E25DE85F700BD00C7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ADF51C25DE85F700BD00C7 /* Constants.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0646345925DE6FB7002BCA3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0646342825DE644B002BCA3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0646344B25DE6FB7002BCA3D;
+			remoteInfo = RaySoExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0607132B25DE72BA006A784C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0607132A25DE72BA006A784C /* XcodeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0646345F25DE6FB7002BCA3D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0646345B25DE6FB7002BCA3D /* RaySoExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0646343025DE644B002BCA3D /* RaySo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaySo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0646343325DE644B002BCA3D /* RaySoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaySoApp.swift; sourceTree = "<group>"; };
+		0646343525DE644B002BCA3D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0646343725DE644D002BCA3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0646343A25DE644D002BCA3D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0646343C25DE644D002BCA3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0646343D25DE644D002BCA3D /* RaySo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RaySo.entitlements; sourceTree = "<group>"; };
+		0646344C25DE6FB7002BCA3D /* RaySoExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RaySoExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0646344E25DE6FB7002BCA3D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0646345025DE6FB7002BCA3D /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
+		0646345325DE6FB7002BCA3D /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		0646345525DE6FB7002BCA3D /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		0646345725DE6FB7002BCA3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0646345825DE6FB7002BCA3D /* RaySoExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RaySoExtension.entitlements; sourceTree = "<group>"; };
+		06ADF51C25DE85F700BD00C7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0646342D25DE644B002BCA3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0646344925DE6FB7002BCA3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0646344F25DE6FB7002BCA3D /* Cocoa.framework in Frameworks */,
+				0607132925DE72BA006A784C /* XcodeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0646342725DE644B002BCA3D = {
+			isa = PBXGroup;
+			children = (
+				0646343225DE644B002BCA3D /* RaySo */,
+				0646345225DE6FB7002BCA3D /* RaySoExtension */,
+				0646344D25DE6FB7002BCA3D /* Frameworks */,
+				0646343125DE644B002BCA3D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0646343125DE644B002BCA3D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0646343025DE644B002BCA3D /* RaySo.app */,
+				0646344C25DE6FB7002BCA3D /* RaySoExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0646343225DE644B002BCA3D /* RaySo */ = {
+			isa = PBXGroup;
+			children = (
+				0646343325DE644B002BCA3D /* RaySoApp.swift */,
+				0646343525DE644B002BCA3D /* ContentView.swift */,
+				0646343725DE644D002BCA3D /* Assets.xcassets */,
+				0646343C25DE644D002BCA3D /* Info.plist */,
+				0646343D25DE644D002BCA3D /* RaySo.entitlements */,
+				0646343925DE644D002BCA3D /* Preview Content */,
+				06ADF51C25DE85F700BD00C7 /* Constants.swift */,
+			);
+			path = RaySo;
+			sourceTree = "<group>";
+		};
+		0646343925DE644D002BCA3D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0646343A25DE644D002BCA3D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0646344D25DE6FB7002BCA3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0646344E25DE6FB7002BCA3D /* Cocoa.framework */,
+				0646345025DE6FB7002BCA3D /* XcodeKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0646345225DE6FB7002BCA3D /* RaySoExtension */ = {
+			isa = PBXGroup;
+			children = (
+				0646345325DE6FB7002BCA3D /* SourceEditorExtension.swift */,
+				0646345525DE6FB7002BCA3D /* SourceEditorCommand.swift */,
+				0646345725DE6FB7002BCA3D /* Info.plist */,
+				0646345825DE6FB7002BCA3D /* RaySoExtension.entitlements */,
+			);
+			path = RaySoExtension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0646342F25DE644B002BCA3D /* RaySo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0646344025DE644D002BCA3D /* Build configuration list for PBXNativeTarget "RaySo" */;
+			buildPhases = (
+				0646342C25DE644B002BCA3D /* Sources */,
+				0646342D25DE644B002BCA3D /* Frameworks */,
+				0646342E25DE644B002BCA3D /* Resources */,
+				0646345F25DE6FB7002BCA3D /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0646345A25DE6FB7002BCA3D /* PBXTargetDependency */,
+			);
+			name = RaySo;
+			productName = RaySo;
+			productReference = 0646343025DE644B002BCA3D /* RaySo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0646344B25DE6FB7002BCA3D /* RaySoExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0646345C25DE6FB7002BCA3D /* Build configuration list for PBXNativeTarget "RaySoExtension" */;
+			buildPhases = (
+				0646344825DE6FB7002BCA3D /* Sources */,
+				0646344925DE6FB7002BCA3D /* Frameworks */,
+				0646344A25DE6FB7002BCA3D /* Resources */,
+				0607132B25DE72BA006A784C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RaySoExtension;
+			productName = RaySoExtension;
+			productReference = 0646344C25DE6FB7002BCA3D /* RaySoExtension.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0646342825DE644B002BCA3D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					0646342F25DE644B002BCA3D = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					0646344B25DE6FB7002BCA3D = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 0646342B25DE644B002BCA3D /* Build configuration list for PBXProject "RaySo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0646342725DE644B002BCA3D;
+			productRefGroup = 0646343125DE644B002BCA3D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0646342F25DE644B002BCA3D /* RaySo */,
+				0646344B25DE6FB7002BCA3D /* RaySoExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0646342E25DE644B002BCA3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0646343B25DE644D002BCA3D /* Preview Assets.xcassets in Resources */,
+				0646343825DE644D002BCA3D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0646344A25DE6FB7002BCA3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0646342C25DE644B002BCA3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0646343625DE644B002BCA3D /* ContentView.swift in Sources */,
+				0646343425DE644B002BCA3D /* RaySoApp.swift in Sources */,
+				06ADF51D25DE85F700BD00C7 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0646344825DE6FB7002BCA3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0646345425DE6FB7002BCA3D /* SourceEditorExtension.swift in Sources */,
+				0646345625DE6FB7002BCA3D /* SourceEditorCommand.swift in Sources */,
+				06ADF51E25DE85F700BD00C7 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0646345A25DE6FB7002BCA3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0646344B25DE6FB7002BCA3D /* RaySoExtension */;
+			targetProxy = 0646345925DE6FB7002BCA3D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0646343E25DE644D002BCA3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0646343F25DE644D002BCA3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		0646344125DE644D002BCA3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RaySo/RaySo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"RaySo/Preview Content\"";
+				DEVELOPMENT_TEAM = 48HY74RKL9;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = RaySo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.artemnovichkov.RaySo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0646344225DE644D002BCA3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RaySo/RaySo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"RaySo/Preview Content\"";
+				DEVELOPMENT_TEAM = 48HY74RKL9;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = RaySo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.artemnovichkov.RaySo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		0646345D25DE6FB7002BCA3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = RaySoExtension/RaySoExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 48HY74RKL9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = RaySoExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.artemnovichkov.RaySo.RaySoExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0646345E25DE6FB7002BCA3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = RaySoExtension/RaySoExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 48HY74RKL9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = RaySoExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.artemnovichkov.RaySo.RaySoExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0646342B25DE644B002BCA3D /* Build configuration list for PBXProject "RaySo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0646343E25DE644D002BCA3D /* Debug */,
+				0646343F25DE644D002BCA3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0646344025DE644D002BCA3D /* Build configuration list for PBXNativeTarget "RaySo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0646344125DE644D002BCA3D /* Debug */,
+				0646344225DE644D002BCA3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0646345C25DE6FB7002BCA3D /* Build configuration list for PBXNativeTarget "RaySoExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0646345D25DE6FB7002BCA3D /* Debug */,
+				0646345E25DE6FB7002BCA3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0646342825DE644B002BCA3D /* Project object */;
+}
