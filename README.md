@@ -2,6 +2,12 @@
 
 Share your awesome code to ray.so with Xcode Extension.
 
+## 🚀 Installation
+
+1. Download the latest release of [RaySo](https://github.com/artemnovichkov/RaySo/releases) and move to `~/Applications` folder.
+2. Run `RaySo.app` and quit.
+3. Go to `System Preferences > Extensions > RaySo` and enable the extension.
+
 ## ✍️ Usage
 
 Customize sharing parameters in main app:
