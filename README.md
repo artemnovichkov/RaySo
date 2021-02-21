@@ -1,12 +1,16 @@
-# ray.so
+# RaySo
 
-Share your awesome code to ray.so with Xcode Extension.
+Share your awesome code to [ray.so](https://ray.so) with Xcode Extension.
 
 ## 🚀 Installation
 
-1. Download the latest release of [RaySo](https://github.com/artemnovichkov/RaySo/releases) and move to `~/Applications` folder.
-2. Run `RaySo.app` and quit.
-3. Go to `System Preferences > Extensions > RaySo` and enable the extension.
+1. Clone this repository.
+2. Activate your team for signing both the macOS app and the extension.
+3. Build the macOS app.
+4. Move the built macOS app to your Mac’s Applications folder. You may need to launch the app at least once to register its extension.
+5. Relaunch Xcode.
+
+You can check that the extension is installed by going to `System preferences > Extensions > Xcode Source Editor`, and verifying that there's a check next to RaySo.
 
 ## ✍️ Usage
 
