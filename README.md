@@ -1,6 +1,6 @@
 # RaySo
 
-Share your awesome code to [ray.so](https://ray.so) with Xcode Extension.
+Share your awesome code to [ray.so](https://ray.so) with Xcode Extension. Read about development jorney in [my blog](https://blog.artemnovichkov.com/developing-xcode-extensions-tips-and-tricks).
 
 ## 🚀 Installation
 
