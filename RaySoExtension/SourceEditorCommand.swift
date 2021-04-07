@@ -12,12 +12,19 @@ final class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         case urlIsInvalid
     }
     
+    private static let languageUTIs: [CFString: String] = [
+        kUTTypeSwiftSource: "swift",
+        kUTTypeObjectiveCSource: "objectivec",
+        "com.apple.dt.playground" as CFString: "swift"
+    ]
+    
     private let defaults = UserDefaults(suiteName: Constants.suiteName)!
     
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) {
         let code = selectedCode(from: invocation.buffer)
+        let language = self.language(forContentUTI: invocation.buffer.contentUTI)
         
-        guard let url = url(forCode: code) else {
+        guard let url = url(forCode: code, language: language) else {
             completionHandler(CommandError.urlIsInvalid)
             return
         }
@@ -27,7 +34,7 @@ final class SourceEditorCommand: NSObject, XCSourceEditorCommand {
     
     // MARK: - Private
     
-    private func url(forCode code: String) -> URL? {
+    private func url(forCode code: String, language: String) -> URL? {
         let color = defaults.string(forKey: Constants.colorKey)
         let background = defaults.bool(forKey: Constants.backgroundKey)
         let darkMode = defaults.bool(forKey: Constants.darkModeKey)
@@ -43,7 +50,8 @@ final class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             .init(name: "darkMode", value: "\(darkMode)"),
             .init(name: "padding", value: "\(padding)"),
             .init(name: "title", value: "Untitled"),
-            .init(name: "code", value: base64String)
+            .init(name: "code", value: base64String),
+            .init(name: "language", value: language)
         ]
         
         return components.url
@@ -71,5 +79,14 @@ final class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             }
         }
         return text.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+    
+    private func language(forContentUTI contentUTI: String) -> String {
+        for (uti, language) in Self.languageUTIs {
+            if UTTypeConformsTo(contentUTI as CFString, uti) {
+                return language
+            }
+        }
+        return "auto"
     }
 }
