@@ -28,7 +28,7 @@ To speed up sharing, you can associate a keyboard shortcut to Share command. Ope
 
 ## Author
 
-Artem Novichkov, https://www.artemnovichkov.com/about
+Artem Novichkov, https://www.artemnovichkov.com/
 
 ## License
 
