@@ -17,6 +17,7 @@
 		0646345425DE6FB7002BCA3D /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0646345325DE6FB7002BCA3D /* SourceEditorExtension.swift */; };
 		0646345625DE6FB7002BCA3D /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0646345525DE6FB7002BCA3D /* SourceEditorCommand.swift */; };
 		0646345B25DE6FB7002BCA3D /* RaySoExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0646344C25DE6FB7002BCA3D /* RaySoExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		067DC7B62D03489B0098BCA5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067DC7B52D03489B0098BCA5 /* Theme.swift */; };
 		06ADF51D25DE85F700BD00C7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ADF51C25DE85F700BD00C7 /* Constants.swift */; };
 		06ADF51E25DE85F700BD00C7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ADF51C25DE85F700BD00C7 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		0646345525DE6FB7002BCA3D /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
 		0646345725DE6FB7002BCA3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0646345825DE6FB7002BCA3D /* RaySoExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RaySoExtension.entitlements; sourceTree = "<group>"; };
+		067DC7B52D03489B0098BCA5 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		06ADF51C25DE85F700BD00C7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +118,7 @@
 		0646343225DE644B002BCA3D /* RaySo */ = {
 			isa = PBXGroup;
 			children = (
+				067DC7B52D03489B0098BCA5 /* Theme.swift */,
 				0646343325DE644B002BCA3D /* RaySoApp.swift */,
 				0646343525DE644B002BCA3D /* ContentView.swift */,
 				0646343725DE644D002BCA3D /* Assets.xcassets */,
@@ -256,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0646343625DE644B002BCA3D /* ContentView.swift in Sources */,
+				067DC7B62D03489B0098BCA5 /* Theme.swift in Sources */,
 				0646343425DE644B002BCA3D /* RaySoApp.swift in Sources */,
 				06ADF51D25DE85F700BD00C7 /* Constants.swift in Sources */,
 			);
@@ -407,14 +411,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"RaySo/Preview Content\"";
-				DEVELOPMENT_TEAM = 48HY74RKL9;
+				DEVELOPMENT_TEAM = MMPP2NZU96;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = RaySo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.artemnovichkov.RaySo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -432,14 +436,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"RaySo/Preview Content\"";
-				DEVELOPMENT_TEAM = 48HY74RKL9;
+				DEVELOPMENT_TEAM = MMPP2NZU96;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = RaySo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.artemnovichkov.RaySo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -454,7 +458,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 48HY74RKL9;
+				DEVELOPMENT_TEAM = MMPP2NZU96;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = RaySoExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -462,6 +466,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.artemnovichkov.RaySo.RaySoExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -477,7 +482,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 48HY74RKL9;
+				DEVELOPMENT_TEAM = MMPP2NZU96;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = RaySoExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -485,6 +490,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.artemnovichkov.RaySo.RaySoExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";

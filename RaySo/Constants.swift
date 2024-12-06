@@ -5,7 +5,7 @@
 enum Constants {
     
     static let suiteName = "group.com.artemnovichkov.RaySo"
-    static let colorKey = "color"
+    static let themeKey = "theme"
     static let backgroundKey = "background"
     static let darkModeKey = "dark_mode"
     static let paddingKey = "padding"

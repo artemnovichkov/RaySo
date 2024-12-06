@@ -4,11 +4,6 @@
 
 import SwiftUI
 
-enum Colors: String, CaseIterable {
-    
-    case candy, breeze, midnight, sunset
-}
-
 enum Padding: Int, CaseIterable {
     
     case small = 16
@@ -20,10 +15,10 @@ enum Padding: Int, CaseIterable {
 struct ContentView: View {
     
     private static let defaults = UserDefaults(suiteName: Constants.suiteName)!
-    
-    @AppStorage(Constants.colorKey, store: Self.defaults)
-    var color: Colors = .midnight
-    
+
+    @AppStorage(Constants.themeKey, store: Self.defaults)
+    var theme: Theme = .candy
+
     @AppStorage(Constants.backgroundKey, store: Self.defaults)
     var background: Bool = true
     
@@ -37,32 +32,50 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("This app contains Xcode Source Editor Extension that allows you to share your code via ray.so. Just select your code and click Editor > ray.so > Share")
-            Picker("", selection: $color) {
-                ForEach(Colors.allCases, id: \.self) { color in
-                    Text(color.rawValue.capitalized)
-                        .font(.caption)
+            Text("This app contains Xcode Source Editor Extension that allows you to share your code via [ray.so](https://ray.so/). Just select your code and click Editor > ray.so > Share")
+                .font(.title3)
+                .lineLimit(nil)
+                .multilineTextAlignment(.leading)
+                .padding(.bottom)
+            HStack(alignment: .top, spacing: 48) {
+                VStack(alignment: .leading) {
+                    Text("Theme")
+                    Picker("", selection: $theme) {
+                        Section(content: {
+                            ForEach(Theme.allCases, id: \.self) { theme in
+                                theme
+                                if theme == .clerk {
+                                    Divider()
+                                }
+                            }
+                        }, header: {
+                            Text("Partners")
+                                .font(.caption)
+                        })
+                    }
                 }
-            }
-            .pickerStyle(SegmentedPickerStyle())
-            HStack {
-                Text("Background")
-                Spacer()
-                Toggle("", isOn: $background)
-            }
-            HStack {
-                Text("Dark Mode")
-                Spacer()
-                Toggle("", isOn: $darkMode)
-            }
-            Picker("", selection: $padding) {
-                ForEach(Padding.allCases, id: \.self) { color in
-                    Text("\(color.rawValue)")
-                        .font(.caption)
+                VStack(alignment: .leading) {
+                    Text("Background")
+                    Toggle("", isOn: $background)
+                        .toggleStyle(.switch)
                 }
+                VStack(alignment: .leading) {
+                    Text("Dark Mode")
+                    Toggle("", isOn: $darkMode)
+                        .toggleStyle(.switch)
+                }
+                VStack(alignment: .leading) {
+                    Text("Padding")
+                    Picker("", selection: $padding) {
+                        ForEach(Padding.allCases, id: \.self) { color in
+                            Text("\(color.rawValue)")
+                                .font(.caption)
+                        }
+                    }
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                .padding(.bottom, 16)
             }
-            .pickerStyle(SegmentedPickerStyle())
-            .padding(.bottom, 16)
             Button("Visit the project on Github") {
                 let url = URL(string: "https://github.com/artemnovichkov/RaySo")!
                 openURL(url)
@@ -70,7 +83,7 @@ struct ContentView: View {
         }
         .padding()
         .onAppear {
-            Self.defaults.register(defaults: [Constants.colorKey: Colors.midnight.rawValue,
+            Self.defaults.register(defaults: [Constants.themeKey: Theme.candy.rawValue,
                                               Constants.backgroundKey: true,
                                               Constants.darkModeKey: true,
                                               Constants.paddingKey: Padding.normal.rawValue])
@@ -78,8 +91,6 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview {
+    ContentView()
 }

@@ -5,18 +5,13 @@
 import Foundation
 import XcodeKit
 import Cocoa
+import UniformTypeIdentifiers
 
 final class SourceEditorCommand: NSObject, XCSourceEditorCommand {
     
     enum CommandError: Swift.Error {
         case urlIsInvalid
     }
-    
-    private static let languageUTIs: [CFString: String] = [
-        kUTTypeSwiftSource: "swift",
-        kUTTypeObjectiveCSource: "objectivec",
-        "com.apple.dt.playground" as CFString: "swift"
-    ]
     
     private let defaults = UserDefaults(suiteName: Constants.suiteName)!
     
@@ -35,7 +30,7 @@ final class SourceEditorCommand: NSObject, XCSourceEditorCommand {
     // MARK: - Private
     
     private func url(forCode code: String, language: String) -> URL? {
-        let color = defaults.string(forKey: Constants.colorKey)
+        let theme = defaults.string(forKey: Constants.themeKey)
         let background = defaults.bool(forKey: Constants.backgroundKey)
         let darkMode = defaults.bool(forKey: Constants.darkModeKey)
         let padding = defaults.integer(forKey: Constants.paddingKey)
@@ -45,7 +40,7 @@ final class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         components.scheme = "https"
         components.host = "ray.so"
         components.queryItems = [
-            .init(name: "colors", value: color),
+            .init(name: "theme", value: theme),
             .init(name: "background", value: "\(background)"),
             .init(name: "darkMode", value: "\(darkMode)"),
             .init(name: "padding", value: "\(padding)"),
@@ -53,10 +48,13 @@ final class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             .init(name: "code", value: base64String),
             .init(name: "language", value: language)
         ]
-        
-        return components.url
+        guard var urlString = components.string else {
+            return nil
+        }
+        urlString = urlString.replacingOccurrences(of: "?", with: "#")
+        return URL(string: urlString)
     }
-    
+
     private func selectedCode(from buffer: XCSourceTextBuffer) -> String {
         var text = ""
         var spacesCount = 0
@@ -82,11 +80,13 @@ final class SourceEditorCommand: NSObject, XCSourceEditorCommand {
     }
     
     private func language(forContentUTI contentUTI: String) -> String {
-        for (uti, language) in Self.languageUTIs {
-            if UTTypeConformsTo(contentUTI as CFString, uti) {
-                return language
-            }
+        switch contentUTI {
+        case UTType.swiftSource.identifier, "com.apple.dt.playground":
+            "swift"
+        case UTType.objectiveCSource.identifier:
+            "objectivec"
+        default:
+            "auto"
         }
-        return "auto"
     }
 }
