@@ -10,7 +10,7 @@ Share your awesome code to [ray.so](https://ray.so) with Xcode Extension. Read a
 4. Move the built macOS app to your Mac’s Applications folder. You may need to launch the app at least once to register its extension.
 5. Relaunch Xcode.
 
-You can check that the extension is installed by going to `System preferences > Extensions > Xcode Source Editor`, and verifying that there's a check next to RaySo.
+You can check that the extension is installed by going to `System preferences > General > Login Items & Extensions > Xcode Source Editor`, and verifying that there's a check next to RaySo.
 
 ## ✍️ Usage
 
